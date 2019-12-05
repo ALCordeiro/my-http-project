@@ -62,7 +62,6 @@ export class ApicallsService {
   }
 
   doGETAsObservable() {
-    debugger
     console.log("GET AS OBSERVABLE");
     let url = `${this.apiRoot}/get`;
     this.http
