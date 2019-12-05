@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApicallsService } from './service/apicalls.service';
 
 @Component({
   selector: 'app-example-http',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExampleHttpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiCalls: ApicallsService) { }
 
   ngOnInit() {
   }
