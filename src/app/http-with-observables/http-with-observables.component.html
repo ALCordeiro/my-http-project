@@ -1,0 +1,27 @@
+<h2>Http with Observable</h2>
+
+<form>
+    <div>
+        <input type="search"
+                placeholder="Enter search"
+                #search>
+    </div>
+    <button type="button" (click)="doSearch(search.value)">Search</button>
+</form>
+
+<hr class="separator"/>
+  
+<div>
+    <p *ngIf="loading">Loading...</p>
+</div>
+  
+<ul>
+    <li *ngFor="let track of results">
+        <img class="thumb" src="{{track.thumbnail}}">
+        <a target="_blank"
+            class="text"
+            href="{{track.link}}">{{ track.track }}
+            </a>
+    </li>
+</ul>
+    

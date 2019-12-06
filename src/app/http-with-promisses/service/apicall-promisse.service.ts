@@ -44,7 +44,6 @@ export class ApicallPromisseService {
                 item.artistId
               );
             });
-            console.log(this.results)
             resolve();
           },
           msg => {
