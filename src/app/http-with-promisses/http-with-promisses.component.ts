@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApicallPromisseService } from './service/apicall-promisse.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-http-with-promisses',
@@ -9,7 +10,7 @@ import { ApicallPromisseService } from './service/apicall-promisse.service';
 export class HttpWithPromissesComponent {
   loading: boolean = false;
 
-  constructor(private apiCallsPromisse: ApicallPromisseService) { }
+  constructor(private apiCallsPromisse: ApicallPromisseService) {  }
 
   doSearch(term: string) {
     this.loading = true;

@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpWithPromissesComponent } from './http-with-promisses/http-with-promisses.component';
 import { HttpWithObservablesComponent } from './http-with-observables/http-with-observables.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './auth.service';
+import { httpInterceptorProviders } from './http-interceptors/index';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
